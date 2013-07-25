@@ -3,7 +3,7 @@
     $QueryState = $_GET['state'];
     $QueryCity = str_replace(' ', '_', $_GET['city']);
 
-    $string = file_get_contents("http://api.wunderground.com/api/9c1b1eac4278f266/conditions/q/" . $QueryState . "/" . $QueryCity . ".json");
+    $string = file_get_contents("http://api.wunderground.com/api/_YOUR_API_KEY_GOES_HERE/conditions/q/" . $QueryState . "/" . $QueryCity . ".json");
     $json_a = json_decode($string,true);
 
 
